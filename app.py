@@ -10,6 +10,8 @@ from PIL import Image
 from Backtesting_Engine import GEMTU772
 from ETF_Functions import *
 
+matplotlib.font_manager._rebuild()
+
 matplotlib.use('Agg') # Engine reset issue solution code (TkAgg->Agg)
 
 load_dotenv()
