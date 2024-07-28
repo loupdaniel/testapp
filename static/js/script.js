@@ -30,7 +30,7 @@ async function sendMessage() {
 
 async function generateText(prompt, images) {
   try {
-    const response = await fetch("http://testapp-u3fz.onrender.com/generate_text_stream", {
+    const response = await fetch("https://testapp-u3fz.onrender.com/generate_text_stream", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
