@@ -10,8 +10,16 @@ from PIL import Image
 from Backtesting_Engine import GEMTU772
 from ETF_Functions import *
 
-import matplotlib.font_manager
-matplotlib.font_manager._rebuild()
+
+import matplotlib.font_manager as fm
+import matplotlib.pyplot as plt
+
+fe = fm.FontEntry(
+    fname=r'C:\fonts/Arial.ttf', # ttf file path
+    name='Arial')                 
+fm.fontManager.ttflist.insert(0, fe)
+plt.rcParams.update({'font.size': 10, 'font.family': 'Arial'})
+
 
 matplotlib.use('Agg') # Engine reset issue solution code (TkAgg->Agg)
 
