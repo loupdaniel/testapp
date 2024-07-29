@@ -6,6 +6,7 @@ from io import BytesIO
 import base64
 import matplotlib
 from PIL import Image
+import markdown2
 
 from Backtesting_Engine import GEMTU772
 from ETF_Functions import *
@@ -84,7 +85,7 @@ def generate_text():
                 "message": "Success generate text",
             },
             "data": {
-                "result": text_result.text,
+                "result": markdown2.markdown(text_result.text),
             }
         }), 200
     else:
